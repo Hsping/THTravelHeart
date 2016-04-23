@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "CloudPOIAnnotation.h"
-
+#import "DetailViewController.h"
 @interface ViewController ()<MAMapViewDelegate, AMapCloudDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -165,6 +165,10 @@
 {
     if (cloudPOI != nil)
     {
+        
+       DetailViewController *avi=[Utilities getStoryboardInstance:@"Main" byIdentity:@"detail"];
+        [self.navigationController pushViewController:avi animated:YES];
+
 //        AMapCloudPOIDetailViewController *cloudPOIDetailViewController = [[AMapCloudPOIDetailViewController alloc] init];
 //        cloudPOIDetailViewController.cloudPOI = cloudPOI;
 //        

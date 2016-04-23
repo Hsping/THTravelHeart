@@ -44,6 +44,12 @@
 		A19395A81CCB086D00CA4911 /* AMapCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395A71CCB086D00CA4911 /* AMapCloudKit.framework */; };
 		A19395AC1CCB0E8200CA4911 /* AMapCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A19395AB1CCB0E8200CA4911 /* AMapCloud.bundle */; };
 		A19395AF1CCB111C00CA4911 /* CloudPOIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395AE1CCB111C00CA4911 /* CloudPOIAnnotation.m */; };
+		A19395B51CCB535400CA4911 /* NearSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395B41CCB535400CA4911 /* NearSearchViewController.m */; };
+		A19395B81CCB537D00CA4911 /* LinePlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395B71CCB537D00CA4911 /* LinePlanningViewController.m */; };
+		A19395BB1CCB53D700CA4911 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395BA1CCB53D700CA4911 /* FoodViewController.m */; };
+		A19395BE1CCB53EB00CA4911 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395BD1CCB53EB00CA4911 /* MovieViewController.m */; };
+		A19395C11CCB540300CA4911 /* SmallSpotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395C01CCB540300CA4911 /* SmallSpotsViewController.m */; };
+		A19395C41CCB541A00CA4911 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395C31CCB541A00CA4911 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +120,18 @@
 		A19395AB1CCB0E8200CA4911 /* AMapCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapCloud.bundle; path = THTravelHeart/AMapCloudKit.framework/Versions/1.1.0.2e2adcf/Resources/AMapCloud.bundle; sourceTree = "<group>"; };
 		A19395AD1CCB111C00CA4911 /* CloudPOIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudPOIAnnotation.h; sourceTree = "<group>"; };
 		A19395AE1CCB111C00CA4911 /* CloudPOIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudPOIAnnotation.m; sourceTree = "<group>"; };
+		A19395B31CCB535400CA4911 /* NearSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearSearchViewController.h; sourceTree = "<group>"; };
+		A19395B41CCB535400CA4911 /* NearSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearSearchViewController.m; sourceTree = "<group>"; };
+		A19395B61CCB537D00CA4911 /* LinePlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinePlanningViewController.h; sourceTree = "<group>"; };
+		A19395B71CCB537D00CA4911 /* LinePlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinePlanningViewController.m; sourceTree = "<group>"; };
+		A19395B91CCB53D700CA4911 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		A19395BA1CCB53D700CA4911 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		A19395BC1CCB53EB00CA4911 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		A19395BD1CCB53EB00CA4911 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		A19395BF1CCB540300CA4911 /* SmallSpotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSpotsViewController.h; sourceTree = "<group>"; };
+		A19395C01CCB540300CA4911 /* SmallSpotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSpotsViewController.m; sourceTree = "<group>"; };
+		A19395C21CCB541A00CA4911 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A19395C31CCB541A00CA4911 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CAE6F6559A539A053B15F6D6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D73B9AEAF046FB741FC9BF25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB44F10130DEA8575E89DCE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +279,18 @@
 			children = (
 				A193953C1CCAF88900CA4911 /* ViewController.h */,
 				A193953D1CCAF88900CA4911 /* ViewController.m */,
+				A19395B31CCB535400CA4911 /* NearSearchViewController.h */,
+				A19395B41CCB535400CA4911 /* NearSearchViewController.m */,
+				A19395B61CCB537D00CA4911 /* LinePlanningViewController.h */,
+				A19395B71CCB537D00CA4911 /* LinePlanningViewController.m */,
+				A19395B91CCB53D700CA4911 /* FoodViewController.h */,
+				A19395BA1CCB53D700CA4911 /* FoodViewController.m */,
+				A19395BC1CCB53EB00CA4911 /* MovieViewController.h */,
+				A19395BD1CCB53EB00CA4911 /* MovieViewController.m */,
+				A19395BF1CCB540300CA4911 /* SmallSpotsViewController.h */,
+				A19395C01CCB540300CA4911 /* SmallSpotsViewController.m */,
+				A19395C21CCB541A00CA4911 /* DetailViewController.h */,
+				A19395C31CCB541A00CA4911 /* DetailViewController.m */,
 			);
 			name = Controller;
 			path = ..;
@@ -524,10 +554,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19395BE1CCB53EB00CA4911 /* MovieViewController.m in Sources */,
+				A19395B51CCB535400CA4911 /* NearSearchViewController.m in Sources */,
+				A19395C11CCB540300CA4911 /* SmallSpotsViewController.m in Sources */,
 				A19395781CCAF9A900CA4911 /* Utilities.m in Sources */,
+				A19395B81CCB537D00CA4911 /* LinePlanningViewController.m in Sources */,
 				A19395AF1CCB111C00CA4911 /* CloudPOIAnnotation.m in Sources */,
 				A19395441CCAF88900CA4911 /* THTravelHeart.xcdatamodeld in Sources */,
 				A193953E1CCAF88900CA4911 /* ViewController.m in Sources */,
+				A19395BB1CCB53D700CA4911 /* FoodViewController.m in Sources */,
+				A19395C41CCB541A00CA4911 /* DetailViewController.m in Sources */,
 				A193953B1CCAF88900CA4911 /* AppDelegate.m in Sources */,
 				A19395381CCAF88900CA4911 /* main.m in Sources */,
 				A19395771CCAF9A900CA4911 /* StorageMgr.m in Sources */,
