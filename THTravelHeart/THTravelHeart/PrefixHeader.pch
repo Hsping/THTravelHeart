@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  THTravelHeart
+//
+//  Created by Hsping on 16/4/23.
+//  Copyright © 2016年 TianHan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapCloudKit/AMapCloudAPI.h>
+#import "APIKey.h"
+#import "Utilities.h"
+#import "Constants.h"
+#endif /* PrefixHeader_pch */
