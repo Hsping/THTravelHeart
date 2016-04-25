@@ -29,7 +29,6 @@
 		A193958A1CCAFD7500CA4911 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395891CCAFD7500CA4911 /* Accounts.framework */; };
 		A193958C1CCAFD7E00CA4911 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A193958B1CCAFD7E00CA4911 /* Social.framework */; };
 		A193958E1CCAFDFB00CA4911 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A193958D1CCAFDFB00CA4911 /* MAMapKit.framework */; };
-		A19395901CCAFE0400CA4911 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A193958F1CCAFE0400CA4911 /* AMapSearchKit.framework */; };
 		A19395921CCAFE2800CA4911 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A19395911CCAFE2800CA4911 /* AMap.bundle */; };
 		A19395941CCAFE4300CA4911 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395931CCAFE4300CA4911 /* UIKit.framework */; };
 		A19395961CCAFE5600CA4911 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395951CCAFE5600CA4911 /* Foundation.framework */; };
@@ -41,8 +40,6 @@
 		A19395A21CCAFF1000CA4911 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395A11CCAFF1000CA4911 /* libstdc++.6.0.9.tbd */; };
 		A19395A41CCAFF1B00CA4911 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395A31CCAFF1B00CA4911 /* libc++.tbd */; };
 		A19395A61CCAFF2700CA4911 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395A51CCAFF2700CA4911 /* Security.framework */; };
-		A19395A81CCB086D00CA4911 /* AMapCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19395A71CCB086D00CA4911 /* AMapCloudKit.framework */; };
-		A19395AC1CCB0E8200CA4911 /* AMapCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A19395AB1CCB0E8200CA4911 /* AMapCloud.bundle */; };
 		A19395AF1CCB111C00CA4911 /* CloudPOIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395AE1CCB111C00CA4911 /* CloudPOIAnnotation.m */; };
 		A19395B51CCB535400CA4911 /* NearSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395B41CCB535400CA4911 /* NearSearchViewController.m */; };
 		A19395B81CCB537D00CA4911 /* LinePlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395B71CCB537D00CA4911 /* LinePlanningViewController.m */; };
@@ -50,6 +47,9 @@
 		A19395BE1CCB53EB00CA4911 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395BD1CCB53EB00CA4911 /* MovieViewController.m */; };
 		A19395C11CCB540300CA4911 /* SmallSpotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395C01CCB540300CA4911 /* SmallSpotsViewController.m */; };
 		A19395C41CCB541A00CA4911 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395C31CCB541A00CA4911 /* DetailViewController.m */; };
+		A1F461BB1CCDF08B00333A57 /* JSONS.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F461BA1CCDF08B00333A57 /* JSONS.m */; };
+		A1F461C51CCDF70A00333A57 /* AMapCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F461C41CCDF70A00333A57 /* AMapCloudKit.framework */; };
+		A1F461C71CCDF73600333A57 /* AMapCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1F461C61CCDF73600333A57 /* AMapCloud.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +103,6 @@
 		A19395891CCAFD7500CA4911 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A193958B1CCAFD7E00CA4911 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A193958D1CCAFDFB00CA4911 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = THTravelHeart/MAMapKit.framework; sourceTree = "<group>"; };
-		A193958F1CCAFE0400CA4911 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = THTravelHeart/AMapSearchKit.framework; sourceTree = "<group>"; };
 		A19395911CCAFE2800CA4911 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = THTravelHeart/MAMapKit.framework/Versions/2.3.0.ca1dc76/Resources/AMap.bundle; sourceTree = "<group>"; };
 		A19395931CCAFE4300CA4911 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A19395951CCAFE5600CA4911 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,9 +114,7 @@
 		A19395A11CCAFF1000CA4911 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		A19395A31CCAFF1B00CA4911 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A19395A51CCAFF2700CA4911 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A19395A71CCB086D00CA4911 /* AMapCloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapCloudKit.framework; path = THTravelHeart/AMapCloudKit.framework; sourceTree = "<group>"; };
 		A19395AA1CCB08EB00CA4911 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
-		A19395AB1CCB0E8200CA4911 /* AMapCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapCloud.bundle; path = THTravelHeart/AMapCloudKit.framework/Versions/1.1.0.2e2adcf/Resources/AMapCloud.bundle; sourceTree = "<group>"; };
 		A19395AD1CCB111C00CA4911 /* CloudPOIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudPOIAnnotation.h; sourceTree = "<group>"; };
 		A19395AE1CCB111C00CA4911 /* CloudPOIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudPOIAnnotation.m; sourceTree = "<group>"; };
 		A19395B31CCB535400CA4911 /* NearSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearSearchViewController.h; sourceTree = "<group>"; };
@@ -132,6 +129,10 @@
 		A19395C01CCB540300CA4911 /* SmallSpotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSpotsViewController.m; sourceTree = "<group>"; };
 		A19395C21CCB541A00CA4911 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A19395C31CCB541A00CA4911 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A1F461B91CCDF08B00333A57 /* JSONS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONS.h; sourceTree = "<group>"; };
+		A1F461BA1CCDF08B00333A57 /* JSONS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONS.m; sourceTree = "<group>"; };
+		A1F461C41CCDF70A00333A57 /* AMapCloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapCloudKit.framework; path = THTravelHeart/AMapCloudKit.framework; sourceTree = "<group>"; };
+		A1F461C61CCDF73600333A57 /* AMapCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapCloud.bundle; path = THTravelHeart/AMapCloudKit.framework/Versions/1.1.0.2e2adcf/Resources/AMapCloud.bundle; sourceTree = "<group>"; };
 		CAE6F6559A539A053B15F6D6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D73B9AEAF046FB741FC9BF25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB44F10130DEA8575E89DCE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19395A81CCB086D00CA4911 /* AMapCloudKit.framework in Frameworks */,
+				A1F461C51CCDF70A00333A57 /* AMapCloudKit.framework in Frameworks */,
 				A19395A61CCAFF2700CA4911 /* Security.framework in Frameworks */,
 				A19395A41CCAFF1B00CA4911 /* libc++.tbd in Frameworks */,
 				A19395A21CCAFF1000CA4911 /* libstdc++.6.0.9.tbd in Frameworks */,
@@ -153,7 +154,6 @@
 				A19395981CCAFE6700CA4911 /* CoreGraphics.framework in Frameworks */,
 				A19395961CCAFE5600CA4911 /* Foundation.framework in Frameworks */,
 				A19395941CCAFE4300CA4911 /* UIKit.framework in Frameworks */,
-				A19395901CCAFE0400CA4911 /* AMapSearchKit.framework in Frameworks */,
 				A193958E1CCAFDFB00CA4911 /* MAMapKit.framework in Frameworks */,
 				A193958C1CCAFD7E00CA4911 /* Social.framework in Frameworks */,
 				A193958A1CCAFD7500CA4911 /* Accounts.framework in Frameworks */,
@@ -197,7 +197,7 @@
 		A193952A1CCAF88800CA4911 = {
 			isa = PBXGroup;
 			children = (
-				A19395AB1CCB0E8200CA4911 /* AMapCloud.bundle */,
+				A1F461C61CCDF73600333A57 /* AMapCloud.bundle */,
 				A19395911CCAFE2800CA4911 /* AMap.bundle */,
 				A19395351CCAF88900CA4911 /* THTravelHeart */,
 				A19395521CCAF88900CA4911 /* THTravelHeartTests */,
@@ -321,6 +321,8 @@
 				A19395741CCAF9A900CA4911 /* StorageMgr.m */,
 				A19395751CCAF9A900CA4911 /* Utilities.h */,
 				A19395761CCAF9A900CA4911 /* Utilities.m */,
+				A1F461B91CCDF08B00333A57 /* JSONS.h */,
+				A1F461BA1CCDF08B00333A57 /* JSONS.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -344,7 +346,7 @@
 		B0BEC7993BA883448AF5CE99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A19395A71CCB086D00CA4911 /* AMapCloudKit.framework */,
+				A1F461C41CCDF70A00333A57 /* AMapCloudKit.framework */,
 				A19395A51CCAFF2700CA4911 /* Security.framework */,
 				A19395A31CCAFF1B00CA4911 /* libc++.tbd */,
 				A19395A11CCAFF1000CA4911 /* libstdc++.6.0.9.tbd */,
@@ -355,7 +357,6 @@
 				A19395971CCAFE6700CA4911 /* CoreGraphics.framework */,
 				A19395951CCAFE5600CA4911 /* Foundation.framework */,
 				A19395931CCAFE4300CA4911 /* UIKit.framework */,
-				A193958F1CCAFE0400CA4911 /* AMapSearchKit.framework */,
 				A193958D1CCAFDFB00CA4911 /* MAMapKit.framework */,
 				A193958B1CCAFD7E00CA4911 /* Social.framework */,
 				A19395891CCAFD7500CA4911 /* Accounts.framework */,
@@ -480,7 +481,7 @@
 				A19395491CCAF88900CA4911 /* LaunchScreen.storyboard in Resources */,
 				A19395461CCAF88900CA4911 /* Assets.xcassets in Resources */,
 				A19395921CCAFE2800CA4911 /* AMap.bundle in Resources */,
-				A19395AC1CCB0E8200CA4911 /* AMapCloud.bundle in Resources */,
+				A1F461C71CCDF73600333A57 /* AMapCloud.bundle in Resources */,
 				A19395411CCAF88900CA4911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +564,7 @@
 				A19395441CCAF88900CA4911 /* THTravelHeart.xcdatamodeld in Sources */,
 				A193953E1CCAF88900CA4911 /* ViewController.m in Sources */,
 				A19395BB1CCB53D700CA4911 /* FoodViewController.m in Sources */,
+				A1F461BB1CCDF08B00333A57 /* JSONS.m in Sources */,
 				A19395C41CCB541A00CA4911 /* DetailViewController.m in Sources */,
 				A193953B1CCAF88900CA4911 /* AppDelegate.m in Sources */,
 				A19395381CCAF88900CA4911 /* main.m in Sources */,

@@ -33,5 +33,14 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+//当按下键盘右下角的按钮执行这个方法，收起键盘
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+//当按下旁白部分收起键盘
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 @end

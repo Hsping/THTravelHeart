@@ -14,8 +14,10 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <MAMapKit/MAMapKit.h>
+//#import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapCloudKit/AMapCloudAPI.h>
 #import "APIKey.h"
 #import "Utilities.h"
 #import "Constants.h"
+#import "JSONS.h"
 #endif /* PrefixHeader_pch */

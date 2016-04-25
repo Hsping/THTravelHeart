@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailViewController ()
 
@@ -17,9 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _image2.userInteractionEnabled=YES;
+    _imageView.userInteractionEnabled=YES;
     UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo)];
-    [self.image2 addGestureRecognizer:photoTap];
+    [self.imageView addGestureRecognizer:photoTap];
+    
+    _nameLbl.text = _cloudPOI.name;
+    _adressLbl.text = _cloudPOI.address;
+    [_phoneBtn setTitle:_cloudPOI.customFields[@"phone"] forState:UIControlStateNormal];
+    
+    NSString *imageStr = _cloudPOI.customFields[@"_image"];
+    if (imageStr.length > 3) {
+        NSRange range = [imageStr rangeOfString:@"_url"];
+        NSString *imageURLStr = [imageStr substringWithRange:NSMakeRange(range.location + range.length + 5, 56)];
+        NSLog(@"%@", imageURLStr);
+        NSURL *imageURL = [NSURL URLWithString:imageURLStr];
+        //[_image2 sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"Image"]];
+        UIImage *image = [Utilities imageUrl:imageURLStr];
+        _imageView.image = image;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +60,7 @@
     _zoomIV.userInteractionEnabled = YES;
     _zoomIV.backgroundColor = [UIColor blackColor];
     
-    _zoomIV.image=_image2.image;
+    _zoomIV.image=_imageView.image;
     
     _zoomIV.contentMode = UIViewContentModeScaleAspectFit;
     //[UIApplication sharedApplication]获得当前App的实例，keyWindow方法可以拿到App实例的主窗口
@@ -67,5 +83,13 @@
     
 }
 
+
+- (IBAction)CallAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拨打",nil];
+    [actionSheet setExclusiveTouch:YES];
+    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+    [actionSheet showInView:self.view];
+
+}
 
 @end

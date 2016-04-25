@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *image2;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) AMapCloudPOI *cloudPOI;
+
+- (IBAction)CallAction:(UIButton *)sender forEvent:(UIEvent *)event;
+@property (weak, nonatomic) IBOutlet UIButton *phoneBtn;
+@property (weak, nonatomic) IBOutlet UILabel *nameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *adressLbl;
+
+
 @property (strong, nonatomic) UIImageView *zoomIV;
+
 @end

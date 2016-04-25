@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "CloudPOIAnnotation.h"
 #import "DetailViewController.h"
+//#import <AMapSearchKit/AMapSearchKit.h>
+
 @interface ViewController ()<MAMapViewDelegate, AMapCloudDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -39,6 +41,7 @@
     self.mapView.userTrackingMode = 1;
     [self.view addSubview:self.mapView];
     
+    //[AMapSearchServices sharedServices].apiKey = (NSString *)APIKey;
     self.cloudAPI = [[AMapCloudAPI alloc] initWithCloudKey:(NSString *)APIKey delegate:self];
     //self.cloudAPI.delegate = self;
     
@@ -166,9 +169,11 @@
     if (cloudPOI != nil)
     {
         
-       DetailViewController *avi=[Utilities getStoryboardInstance:@"Main" byIdentity:@"detail"];
-        [self.navigationController pushViewController:avi animated:YES];
-
+        
+       DetailViewController *detail = [Utilities getStoryboardInstance:@"Main" byIdentity:@"detail"];
+        detail.cloudPOI = cloudPOI;
+        
+        [self.navigationController pushViewController:detail animated:YES];
 //        AMapCloudPOIDetailViewController *cloudPOIDetailViewController = [[AMapCloudPOIDetailViewController alloc] init];
 //        cloudPOIDetailViewController.cloudPOI = cloudPOI;
 //        
