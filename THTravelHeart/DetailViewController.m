@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+
 @interface DetailViewController ()
 
 @end
