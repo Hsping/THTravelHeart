@@ -7,7 +7,7 @@
 //
 
 #import "NearSearchViewController.h"
-
+#import "SmallSpotsViewController.h"
 @interface NearSearchViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     // Do any additional setup after loading the view.
 }
 
@@ -43,4 +44,6 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
+
+
 @end

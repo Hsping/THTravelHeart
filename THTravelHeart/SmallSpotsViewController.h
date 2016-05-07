@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SmallSpotsViewController : UIViewController
-
+@property (nonatomic, strong) AMapCloudPOI *cloudPOI;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong)NSMutableArray *spots;
 @end

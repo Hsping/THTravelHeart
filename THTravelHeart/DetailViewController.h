@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) AMapCloudPOI *cloudPOI;
-
+@property(nonatomic,strong)NSMutableArray *tip1;
 - (IBAction)CallAction:(UIButton *)sender forEvent:(UIEvent *)event;
 @property (weak, nonatomic) IBOutlet UIButton *phoneBtn;
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;

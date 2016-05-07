@@ -7,7 +7,14 @@
 //
 
 #import "SmallSpotsViewController.h"
-
+#import "CloudPOIAnnotation.h"
+#import "DetailViewController.h"
+#import "PinYinForObjc.h"
+#import "ChineseInclude.h"
+#import <AMapSearchKit/AMapSearchObj.h>
+#import <AMapSearchKit/AMapSearchAPI.h>
+#import <MAMapKit/MAMapKit.h>
+#import "StorageMgr.h"
 @interface SmallSpotsViewController ()
 
 @end
@@ -16,6 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _spots=[NSMutableArray new];
+   _spots=[[StorageMgr singletonStorageMgr]objectForKey:@"SignUpSuccessfully"];
+   
+    NSLog(@"zxczxczxczxczxczxcfdbgdsgsdgsdgdsgsdgsdgsdgsdgsdgsdgsdgsdgsdgsdgsdgsdg%@",_spots);
     // Do any additional setup after loading the view.
 }
 
@@ -33,5 +44,17 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return _spots.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+   AMapTip *tip= _spots[indexPath.row];
+    cell.textLabel.text=tip.name;
+   
+  
+   
+    return cell;
+}
 @end

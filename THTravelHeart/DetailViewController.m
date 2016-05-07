@@ -31,7 +31,7 @@
     if (imageStr.length > 3) {
         NSRange range = [imageStr rangeOfString:@"_url"];
         NSString *imageURLStr = [imageStr substringWithRange:NSMakeRange(range.location + range.length + 5, 56)];
-        NSLog(@"%@", imageURLStr);
+       
         NSURL *imageURL = [NSURL URLWithString:imageURLStr];
         //[_image2 sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"Image"]];
         UIImage *image = [Utilities imageUrl:imageURLStr];

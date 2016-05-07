@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NearSearchViewController : UIViewController
-
+@property(strong,nonatomic)NSMutableArray *jindian;
 @end

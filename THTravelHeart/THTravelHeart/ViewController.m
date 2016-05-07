@@ -15,7 +15,8 @@
 #import <AMapSearchKit/AMapSearchAPI.h>
 #import <MAMapKit/MAMapKit.h>
 #define GeoPlaceHolder @"名称"
-
+#import "NearSearchViewController.h"
+#import "StorageMgr.h"
 @interface ViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate, AMapSearchDelegate>
 {
     UITableView *_tableview;
@@ -28,6 +29,7 @@
 @property(nonatomic,strong)UISearchBar *searchBar;
 @property(nonatomic,strong)UISearchDisplayController *displayController;
 @property(nonatomic,strong)NSMutableArray *tips;
+@property(nonatomic,strong)NSMutableArray *objectsForShow;
 @property (nonatomic, strong) AMapSearchAPI *search;
 @end
 
@@ -106,6 +108,7 @@
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = 1;
+    _objectsForShow=[NSMutableArray new];
     [self.view addSubview:self.mapView];
     
     //[AMapSearchServices sharedServices].apiKey = (NSString *)APIKey;
@@ -225,8 +228,8 @@
     
     for (AMapCloudPOI *aPOI in pois)
     {
-        NSLog(@"%@",aPOI);
-        
+        NSLog(@"这个事吗%@",aPOI);
+        [_objectsForShow addObject:aPOI];
         CloudPOIAnnotation *ann = [[CloudPOIAnnotation alloc] initWithCloudPOI:aPOI];
         [self.mapView addAnnotation:ann];
     }
@@ -330,16 +333,7 @@
     }
 }
 
-//当按下键盘右下角的按钮执行这个方法，收起键盘
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    
-    return YES;
-}
-//当按下旁白部分收起键盘
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
-}
+
 #pragma mark - AMapSearchDelegate
 
 
@@ -440,4 +434,27 @@
 }
 
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"fujin"]) {
+        //获得当前用户选中细胞的行数
+        [[StorageMgr singletonStorageMgr]addKey:@"SignUpSuccessfully" andValue:_objectsForShow];
+    }
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+
+
+//当按下键盘右下角的按钮执行这个方法，收起键盘
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+//当按下旁白部分收起键盘
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 @end
