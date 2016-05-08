@@ -277,6 +277,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="附近搜索" id="nni-fz-zEn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="image3View" destination="iK0-ve-6U3" id="WLh-K8-yq2"/>
+                        <outlet property="image4View" destination="9JN-G3-tFt" id="54A-4S-bJY"/>
+                        <outlet property="image5View" destination="Eql-gI-QPg" id="6lB-K6-KF9"/>
+                        <outlet property="image6View" destination="3Rg-Sy-NXe" id="MrS-Fi-hkb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3Z-q2-bof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

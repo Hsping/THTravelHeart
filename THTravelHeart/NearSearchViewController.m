@@ -9,7 +9,7 @@
 #import "NearSearchViewController.h"
 #import "SmallSpotsViewController.h"
 @interface NearSearchViewController ()
-
+@property(strong,nonatomic) NSString *i;
 @end
 
 @implementation NearSearchViewController
@@ -18,12 +18,109 @@
     [super viewDidLoad];
    
     // Do any additional setup after loading the view.
+    _image3View.userInteractionEnabled=YES;
+    
+    UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo)];
+    
+    [self.image3View addGestureRecognizer:photoTap];
+    
+   
+   
+    _image4View.userInteractionEnabled=YES;
+    UITapGestureRecognizer *photoTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo1)];
+    
+    [self.image4View addGestureRecognizer:photoTap1];
+    
+    _image5View.userInteractionEnabled=YES;
+    UITapGestureRecognizer *photoTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo2)];
+    
+    [self.image5View addGestureRecognizer:photoTap2];
+
+    _image6View.userInteractionEnabled=YES;
+    UITapGestureRecognizer *photoTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo3)];
+    
+    [self.image6View addGestureRecognizer:photoTap3];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)photo1{
+    _i=@"1";
+    [self photo];
+}
+-(void)photo2{
+    _i = @"2";
+    [self photo];
+}
+
+-(void)photo3{
+    _i = @"3";
+    [self photo];
+}
+
+
+- (void)photo{
+    
+    //UIScreen mainScreen是获取屏幕的实例（全屏显示）
+    _zoomIV = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //激活用户交互功能
+    _zoomIV.userInteractionEnabled = YES;
+    _zoomIV.backgroundColor = [UIColor blackColor];
+    if ([_i isEqualToString:@"1"]) {
+        _zoomIV.image=_image4View.image;
+        _i=nil;
+    }else  if([_i isEqualToString:@"2"]){
+        _zoomIV.image=_image5View.image;
+        _i = nil;
+    }else if([_i isEqualToString:@"3"]){
+        _zoomIV.image = _image6View.image;
+        _i = nil;
+        
+    }else {
+        _zoomIV.image = _image3View.image;
+        _i = nil;
+
+    }
+   
+    
+    _zoomIV.contentMode = UIViewContentModeScaleAspectFit;
+    //[UIApplication sharedApplication]获得当前App的实例，keyWindow方法可以拿到App实例的主窗口
+    [[UIApplication sharedApplication].keyWindow addSubview:_zoomIV];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomTap:)];
+    [_zoomIV addGestureRecognizer:tap];
+    
+    
+//    //UIScreen mainScreen是获取屏幕的实例（全屏显示）
+//    _zoomIV1 = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    //激活用户交互功能
+//    _zoomIV1.userInteractionEnabled = YES;
+//    _zoomIV1.backgroundColor = [UIColor blackColor];
+//    
+//    _zoomIV1.image=_image4View.image;
+//    
+//    
+//    _zoomIV1.contentMode = UIViewContentModeScaleAspectFit;
+//    //[UIApplication sharedApplication]获得当前App的实例，keyWindow方法可以拿到App实例的主窗口
+//    [[UIApplication sharedApplication].keyWindow addSubview:_zoomIV1];
+//    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomTap:)];
+//    [_zoomIV1 addGestureRecognizer:tap1];
+    
+    
+}
+- (void)zoomTap:(UITapGestureRecognizer *)sender{
+    NSLog(@"缩小");
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        [_zoomIV removeFromSuperview];
+        [_zoomIV removeGestureRecognizer:sender];
+        _zoomIV = nil;
+    }
+    
+    
+    
+}
+
 
 /*
 #pragma mark - Navigation

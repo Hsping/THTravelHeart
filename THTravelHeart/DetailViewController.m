@@ -32,8 +32,8 @@
         NSRange range = [imageStr rangeOfString:@"_url"];
         NSString *imageURLStr = [imageStr substringWithRange:NSMakeRange(range.location + range.length + 5, 56)];
        
-        NSURL *imageURL = [NSURL URLWithString:imageURLStr];
-        //[_image2 sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"Image"]];
+//        NSURL *imageURL = [NSURL URLWithString:imageURLStr];
+//        [_image2 sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"Image"]];
         UIImage *image = [Utilities imageUrl:imageURLStr];
         _imageView.image = image;
     }
