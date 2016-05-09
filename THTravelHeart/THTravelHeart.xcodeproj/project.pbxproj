@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		86A6D4959C59C13F23675E68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73B9AEAF046FB741FC9BF25 /* libPods.a */; };
+		A12649371CE081F9001CA149 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A12649321CE081F9001CA149 /* SDCollectionViewCell.m */; };
+		A12649381CE081F9001CA149 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A12649341CE081F9001CA149 /* SDCycleScrollView.m */; };
+		A12649391CE081F9001CA149 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A12649361CE081F9001CA149 /* UIView+SDExtension.m */; };
+		A12649421CE08212001CA149 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = A126493B1CE08212001CA149 /* TAAbstractDotView.m */; };
+		A12649431CE08212001CA149 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = A126493D1CE08212001CA149 /* TAAnimatedDotView.m */; };
+		A12649441CE08212001CA149 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = A126493F1CE08212001CA149 /* TADotView.m */; };
+		A12649451CE08212001CA149 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A12649411CE08212001CA149 /* TAPageControl.m */; };
 		A19395381CCAF88900CA4911 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A19395371CCAF88900CA4911 /* main.m */; };
 		A193953B1CCAF88900CA4911 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A193953A1CCAF88900CA4911 /* AppDelegate.m */; };
 		A193953E1CCAF88900CA4911 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A193953D1CCAF88900CA4911 /* ViewController.m */; };
@@ -80,6 +87,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A12649311CE081F9001CA149 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		A12649321CE081F9001CA149 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		A12649331CE081F9001CA149 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		A12649341CE081F9001CA149 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		A12649351CE081F9001CA149 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		A12649361CE081F9001CA149 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		A126493A1CE08212001CA149 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		A126493B1CE08212001CA149 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		A126493C1CE08212001CA149 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		A126493D1CE08212001CA149 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		A126493E1CE08212001CA149 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		A126493F1CE08212001CA149 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		A12649401CE08212001CA149 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		A12649411CE08212001CA149 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
 		A19395331CCAF88900CA4911 /* THTravelHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THTravelHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19395371CCAF88900CA4911 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A19395391CCAF88900CA4911 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,6 +245,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A126492E1CE081CA001CA149 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A126492F1CE081CD001CA149 /* SDCycleScrollView */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		A126492F1CE081CD001CA149 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				A12649301CE081CF001CA149 /* PageControl */,
+				A12649311CE081F9001CA149 /* SDCollectionViewCell.h */,
+				A12649321CE081F9001CA149 /* SDCollectionViewCell.m */,
+				A12649331CE081F9001CA149 /* SDCycleScrollView.h */,
+				A12649341CE081F9001CA149 /* SDCycleScrollView.m */,
+				A12649351CE081F9001CA149 /* UIView+SDExtension.h */,
+				A12649361CE081F9001CA149 /* UIView+SDExtension.m */,
+			);
+			name = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		A12649301CE081CF001CA149 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				A126493A1CE08212001CA149 /* TAAbstractDotView.h */,
+				A126493B1CE08212001CA149 /* TAAbstractDotView.m */,
+				A126493C1CE08212001CA149 /* TAAnimatedDotView.h */,
+				A126493D1CE08212001CA149 /* TAAnimatedDotView.m */,
+				A126493E1CE08212001CA149 /* TADotView.h */,
+				A126493F1CE08212001CA149 /* TADotView.m */,
+				A12649401CE08212001CA149 /* TAPageControl.h */,
+				A12649411CE08212001CA149 /* TAPageControl.m */,
+			);
+			name = PageControl;
+			sourceTree = "<group>";
+		};
 		A193952A1CCAF88800CA4911 = {
 			isa = PBXGroup;
 			children = (
@@ -334,8 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				A193953F1CCAF88900CA4911 /* Main.storyboard */,
-				A19395471CCAF88900CA4911 /* LaunchScreen.storyboard */,
 				A19395451CCAF88900CA4911 /* Assets.xcassets */,
+				A19395471CCAF88900CA4911 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			path = ..;
@@ -344,6 +402,7 @@
 		A193956F1CCAF8D900CA4911 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A126492E1CE081CA001CA149 /* Lib */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -643,22 +702,29 @@
 				C4B19E771CDC2D0E0080AAD1 /* NSString+PinYin4Cocoa.m in Sources */,
 				C41AC8771CCF52E500B47178 /* GeoViewController.m in Sources */,
 				A19395781CCAF9A900CA4911 /* Utilities.m in Sources */,
+				A12649391CE081F9001CA149 /* UIView+SDExtension.m in Sources */,
+				A12649431CE08212001CA149 /* TAAnimatedDotView.m in Sources */,
 				C4B19E791CDC2D0E0080AAD1 /* PinYinForObjc.m in Sources */,
 				C4B19E831CDC34930080AAD1 /* NaigationViewController.m in Sources */,
+				A12649381CE081F9001CA149 /* SDCycleScrollView.m in Sources */,
 				C4B19E751CDC2D0E0080AAD1 /* ChineseToPinyinResource.m in Sources */,
 				A19395B81CCB537D00CA4911 /* LinePlanningViewController.m in Sources */,
+				A12649421CE08212001CA149 /* TAAbstractDotView.m in Sources */,
 				C4B19E781CDC2D0E0080AAD1 /* PinyinFormatter.m in Sources */,
 				A19395AF1CCB111C00CA4911 /* CloudPOIAnnotation.m in Sources */,
+				A12649451CE08212001CA149 /* TAPageControl.m in Sources */,
 				A19395441CCAF88900CA4911 /* THTravelHeart.xcdatamodeld in Sources */,
 				A193953E1CCAF88900CA4911 /* ViewController.m in Sources */,
 				C4B19E801CDC33670080AAD1 /* ChineseInclude.m in Sources */,
 				C4B19E761CDC2D0E0080AAD1 /* HanyuPinyinOutputFormat.m in Sources */,
+				A12649441CE08212001CA149 /* TADotView.m in Sources */,
 				A19395BB1CCB53D700CA4911 /* FoodViewController.m in Sources */,
 				A1F461BB1CCDF08B00333A57 /* JSONS.m in Sources */,
 				A19395C41CCB541A00CA4911 /* DetailViewController.m in Sources */,
 				A193953B1CCAF88900CA4911 /* AppDelegate.m in Sources */,
 				A19395381CCAF88900CA4911 /* main.m in Sources */,
 				A19395771CCAF9A900CA4911 /* StorageMgr.m in Sources */,
+				A12649371CE081F9001CA149 /* SDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

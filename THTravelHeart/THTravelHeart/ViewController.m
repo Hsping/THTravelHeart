@@ -47,7 +47,8 @@
         return;
     }
     AMapCloudPlaceAroundSearchRequest *request = [[AMapCloudPlaceAroundSearchRequest alloc] init];
-    request.tableID = (NSString *)tableID;//在数据管理台中取得
+    request.tableID = (NSString *)tableID1;//在数据管理台中取得
+//    request.tableID = (NSString *)tableID2;
     double radius = 30000;
     AMapCloudPoint *centerPoint = [AMapCloudPoint locationWithLatitude:31.57 longitude:120.27];
     [request setOffset:100];
@@ -63,6 +64,7 @@
 //        geo.city=@[adcode];
 //    }
     [self.cloudAPI AMapCloudPlaceAroundSearch:request];
+  
     
 //    [self.search AMapGeocodeSearch:geo];
 }
@@ -116,6 +118,7 @@
     //self.cloudAPI.delegate = self;
     
     [self cloudPlaceAroundSearch];
+  
     [super viewDidLoad];
     
     [self initSearchBar];
@@ -177,7 +180,8 @@
 - (void)cloudPlaceAroundSearch
 {
     AMapCloudPlaceAroundSearchRequest *placeAround = [[AMapCloudPlaceAroundSearchRequest alloc] init];
-    [placeAround setTableID:(NSString *)tableID];
+    [placeAround setTableID:(NSString *)tableID1];
+//     [placeAround setTableID:(NSString *)tableID2];
     
     double radius = 30000;
     AMapCloudPoint *centerPoint = [AMapCloudPoint locationWithLatitude:31.57 longitude:120.27];

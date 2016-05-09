@@ -8,6 +8,7 @@
 
 #import "NearSearchViewController.h"
 #import "SmallSpotsViewController.h"
+#import "SDCycleScrollView.h"
 @interface NearSearchViewController ()
 @property(strong,nonatomic) NSString *i;
 @end
@@ -40,6 +41,34 @@
     UITapGestureRecognizer *photoTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo3)];
     
     [self.image6View addGestureRecognizer:photoTap3];
+    UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
+    [_ViewA addSubview:demoContainerView];
+    
+    
+    
+    
+    // 情景一：采用本地图片实现
+    NSArray *imageNames = @[@"Image-3",
+                            @"Image-4",
+                            @"Image-8",
+                            @"Image-9",
+                            @"Image-10" // 本地图片请填写全名
+                            ];
+    
+    // 本地加载 --- 创建不带标题的图片轮播器
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,-64, _ViewA.frame.size.width,_ViewA.frame.size.height+60) shouldInfiniteLoop:YES imageNamesGroup:imageNames];
+    cycleScrollView.delegate = self;
+    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+    [demoContainerView addSubview:cycleScrollView];
+}
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    
+    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
