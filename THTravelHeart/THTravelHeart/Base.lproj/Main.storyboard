@@ -112,14 +112,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-UU-DCi">
-                                <rect key="frame" x="127" y="114" width="122" height="29"/>
-                                <segments>
-                                    <segment title="公交"/>
-                                    <segment title="驾车"/>
-                                    <segment title="步行"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入起点" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5I4-k3-CY0">
                                 <rect key="frame" x="67" y="162" width="258" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,6 +123,9 @@
                                 <state key="normal" title="开  始  导  航">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6uF-F1-Roj" kind="show" identifier="daohang" id="kmF-67-zta"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,13 +134,11 @@
                             <constraint firstItem="sKm-Kg-xSb" firstAttribute="centerX" secondItem="xnc-RS-5bT" secondAttribute="centerX" id="DS5-wg-Tiz"/>
                             <constraint firstItem="Cxz-dX-YRD" firstAttribute="top" secondItem="JNp-TN-zRP" secondAttribute="bottom" constant="100" id="F96-eI-22B"/>
                             <constraint firstItem="fa1-ha-fdB" firstAttribute="leading" secondItem="xnc-RS-5bT" secondAttribute="leading" constant="40" id="IeE-bT-1ot"/>
-                            <constraint firstItem="aJ1-UU-DCi" firstAttribute="top" secondItem="JNp-TN-zRP" secondAttribute="bottom" constant="50" id="N4U-TD-luM"/>
+                            <constraint firstItem="5I4-k3-CY0" firstAttribute="top" secondItem="JNp-TN-zRP" secondAttribute="bottom" constant="98" id="LjP-dI-fgs"/>
                             <constraint firstItem="fa1-ha-fdB" firstAttribute="top" secondItem="Cxz-dX-YRD" secondAttribute="bottom" constant="55" id="T70-aV-ejg"/>
-                            <constraint firstItem="aJ1-UU-DCi" firstAttribute="centerX" secondItem="xnc-RS-5bT" secondAttribute="centerX" id="VBm-pe-2Qs"/>
                             <constraint firstAttribute="trailing" secondItem="5I4-k3-CY0" secondAttribute="trailing" constant="50" id="dT9-mU-Wa0"/>
                             <constraint firstItem="PTF-dS-iYC" firstAttribute="leading" secondItem="fa1-ha-fdB" secondAttribute="trailing" constant="10" id="fx4-TQ-GV6"/>
                             <constraint firstItem="Cxz-dX-YRD" firstAttribute="leading" secondItem="xnc-RS-5bT" secondAttribute="leading" constant="40" id="gaN-sJ-IGS"/>
-                            <constraint firstItem="5I4-k3-CY0" firstAttribute="top" secondItem="aJ1-UU-DCi" secondAttribute="bottom" constant="20" id="sxi-gF-nsh"/>
                             <constraint firstItem="5I4-k3-CY0" firstAttribute="leading" secondItem="Cxz-dX-YRD" secondAttribute="trailing" constant="10" id="u3J-Pg-iGr"/>
                             <constraint firstAttribute="trailing" secondItem="PTF-dS-iYC" secondAttribute="trailing" constant="50" id="yuC-5a-P3Z"/>
                             <constraint firstItem="PTF-dS-iYC" firstAttribute="top" secondItem="5I4-k3-CY0" secondAttribute="bottom" constant="45" id="zWV-pK-8kY"/>
@@ -464,8 +457,8 @@
                                     <constraint firstAttribute="height" constant="150" id="vWN-Wb-tBG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilL-Xg-z3e">
-                                <rect key="frame" x="162" y="322" width="51" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilL-Xg-z3e">
+                                <rect key="frame" x="162" y="317" width="51" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="到这去"/>
                                 <connections>
@@ -529,4 +522,7 @@
         <image name="Image-5" width="512" height="363"/>
         <image name="Image-6" width="234" height="142"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kmF-67-zta"/>
+    </inferredMetricsTieBreakers>
 </document>
