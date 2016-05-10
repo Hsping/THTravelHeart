@@ -15,8 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *ViewA;
 
 @property(strong,nonatomic)NSMutableArray *jindian;
-@property (weak, nonatomic) IBOutlet UIImageView *image3View;
-@property (weak, nonatomic) IBOutlet UIImageView *image4View;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *image5View;
 @property (weak, nonatomic) IBOutlet UIImageView *image6View;

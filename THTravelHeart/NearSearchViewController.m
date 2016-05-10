@@ -19,28 +19,19 @@
     [super viewDidLoad];
    
     // Do any additional setup after loading the view.
-    _image3View.userInteractionEnabled=YES;
-    
-    UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo)];
-    
-    [self.image3View addGestureRecognizer:photoTap];
-    
    
-   
-    _image4View.userInteractionEnabled=YES;
-    UITapGestureRecognizer *photoTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo1)];
     
-    [self.image4View addGestureRecognizer:photoTap1];
     
     _image5View.userInteractionEnabled=YES;
-    UITapGestureRecognizer *photoTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo2)];
+    UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo1)];
     
-    [self.image5View addGestureRecognizer:photoTap2];
+    [self.image5View addGestureRecognizer:photoTap];
 
     _image6View.userInteractionEnabled=YES;
-    UITapGestureRecognizer *photoTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo3)];
+    UITapGestureRecognizer *photoTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photo2)];
     
-    [self.image6View addGestureRecognizer:photoTap3];
+    [self.image6View addGestureRecognizer:photoTap1];
+    
     UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
     [_ViewA addSubview:demoContainerView];
@@ -84,11 +75,6 @@
     [self photo];
 }
 
--(void)photo3{
-    _i = @"3";
-    [self photo];
-}
-
 
 - (void)photo{
     
@@ -98,21 +84,12 @@
     _zoomIV.userInteractionEnabled = YES;
     _zoomIV.backgroundColor = [UIColor blackColor];
     if ([_i isEqualToString:@"1"]) {
-        _zoomIV.image=_image4View.image;
+        _zoomIV.image=_image5View.image;
         _i=nil;
     }else  if([_i isEqualToString:@"2"]){
-        _zoomIV.image=_image5View.image;
+        _zoomIV.image=_image6View.image;
         _i = nil;
-    }else if([_i isEqualToString:@"3"]){
-        _zoomIV.image = _image6View.image;
-        _i = nil;
-        
-    }else {
-        _zoomIV.image = _image3View.image;
-        _i = nil;
-
     }
-   
     
     _zoomIV.contentMode = UIViewContentModeScaleAspectFit;
     //[UIApplication sharedApplication]获得当前App的实例，keyWindow方法可以拿到App实例的主窗口
